@@ -8,8 +8,8 @@ setup(
   version = dabdemo.__version__,
   author = dabdemo.__author__,
   url = "https://<my-url>",
-  author_email = "<my-author-name>@<my-organization>",
-  description = "<my-package-description>",
+  author_email = "vrindarnair@gmail.com",
+  description = "Python  Build",
   packages = find_packages(include = ["dabdemo"]),
   entry_points={"group_1": "run=dabdemo.__main__:main"},
   install_requires = ["setuptools"]
