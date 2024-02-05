@@ -11,7 +11,7 @@ node {
     git branch: GITBRANCH, url: GITREPOREMOTE
   }
   stage('Validate Bundle') {
-    sh """#!/bin/bash
+    bat """#!/bin/bash
           ${DBCLIPATH}/databricks bundle validate -t ${BUNDLETARGET}
        """
   }
