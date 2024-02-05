@@ -11,22 +11,21 @@ node {
     git branch: GITBRANCH, url: GITREPOREMOTE
   }
   stage('Validate Bundle') {
-    bat """#!/bin/bash
-          ${DBCLIPATH}/databricks bundle validate -t ${BUNDLETARGET}
+    bat """ ${DBCLIPATH}/databricks bundle validate -t ${BUNDLETARGET}
        """
   }
   stage('Deploy Bundle') {
-    bat """#!/bin/bash
+    bat """
           ${DBCLIPATH}/databricks bundle deploy -t ${BUNDLETARGET}
        """
   }
   stage('Run Unit Tests') {
-    bat """#!/bin/bash
+    bat """
           ${DBCLIPATH}/databricks bundle run -t ${BUNDLETARGET} run-unit-tests
        """
   }
   stage('Run Notebook') {
-    bat """#!/bin/bash
+    bat """
           ${DBCLIPATH}/databricks bundle run -t ${BUNDLETARGET} run-dabdemo-notebook
        """
   }
