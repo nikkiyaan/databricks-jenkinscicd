@@ -10,5 +10,10 @@ node {
   stage('Checkout') {
     git branch: GITBRANCH, url: GITREPOREMOTE
   }
- 
+stage('Deploy Bundle') {
+    bat """
+          ${DBCLIPATH}/databricks bundle deploy -t ${BUNDLETARGET}
+       """
+  }
+
 }
