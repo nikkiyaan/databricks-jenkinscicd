@@ -7,7 +7,7 @@ setup(
   name = "dabdemo",
   version = dabdemo.__version__,
   author = dabdemo.__author__,
-  url = "https://<my-url>",
+  url = "https://adb-3789614373587627.7.azuredatabricks.net/",
   author_email = "vrindarnair@gmail.com",
   description = "Python  Build",
   packages = find_packages(include = ["dabdemo"]),
