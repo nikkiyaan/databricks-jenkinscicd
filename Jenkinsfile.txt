@@ -14,5 +14,6 @@ node {
     bat """ databricks.exe bundle deploy -t ${BUNDLETARGET} """
   }
 
-  bat """ databricks.exe workspace export-dir -t ${BUNDLETARGET}  --overwrite """
+  bat """ databricks.exe workspace import-dir C:\Users\vrinda.r.nair.DIR.000\.jenkins\workspace\databricks-demo\Libraries\python\dabdemo /Users/vrindarnair@gmail.com \
+  --  overwrite """
 }
