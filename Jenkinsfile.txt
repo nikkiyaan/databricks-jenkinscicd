@@ -11,6 +11,6 @@ node {
     git branch: GITBRANCH, url: GITREPOREMOTE
   }
   stage('Deploy Bundle') {
-    bat 'databricks workspace import_dir  C:/Users/vrinda.r.nair.DIR.000/.jenkins/workspace/databricks-demo/testcode1/ /Shared/'
+    bat 'databricks.exe workspace import_dir  C:/Users/vrinda.r.nair.DIR.000/.jenkins/workspace/databricks-demo/testcode1 /Shared'
   }
 }
