@@ -11,8 +11,8 @@ node {
     git branch: GITBRANCH, url: GITREPOREMOTE
   }
   stage('Deploy Bundle') {
-    """ ${DBCLIPATH}/databricks bundle deploy -t ${BUNDLETARGET} """
+    bat """ ${DBCLIPATH}/databricks bundle deploy -t ${BUNDLETARGET} """
   }
 
-  """ ${DBCLIPATH}/databricks workspace export-dir -t ${BUNDLETARGET}  --overwrite """
+  bat """ ${DBCLIPATH}/databricks workspace export-dir -t ${BUNDLETARGET}  --overwrite """
 }
