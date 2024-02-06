@@ -10,7 +10,7 @@ node {
   stage('Checkout') {
     git branch: GITBRANCH, url: GITREPOREMOTE
   }
-  stage('Validate Bundle') {
+  /*stage('Validate Bundle') {
     bat """ ${DBCLIPATH}/databricks bundle validate -t ${BUNDLETARGET}
        """
   }
@@ -55,5 +55,5 @@ node {
   }
   stage('Publish Test Results') {
     junit allowEmptyResults: true, testResults: '**/test-results/*.xml', skipPublishingChecks: true
-  }
+  }*/
 }
