@@ -2,7 +2,7 @@
 node {
   def GITREPOREMOTE = "https://github.com/vrinda-nair/Databricks-jenkinscicd.git"
   def GITBRANCH     = "master"
-  def DBCLIPATH     = "C:/Users/vrinda.r.nair.DIR.000/AppData/Local/Programs/Python/Python311/Scripts"
+  def DBCLIPATH     = "C:/Users/vrinda.r.nair.DIR.000/AppData/Local/Programs/Python/Python312/Scripts"
   def JQPATH        = "C:/Users/vrinda.r.nair.DIR.000/AppData/Local/Microsoft/WinGet/Packages/jqlang.jq_Microsoft.Winget.Source_8wekyb3d8bbwe/jq.exe"
   def JOBPREFIX     = "jenkins-demo"
   def BUNDLETARGET  = "dev"
@@ -11,6 +11,6 @@ node {
     git branch: GITBRANCH, url: GITREPOREMOTE
   }
   stage('Deploy Bundle') {
-    bat 'C:/Users/vrinda.r.nair.DIR.000/AppData/Local/Programs/Python/Python311/Scripts/databricks.exe workspace import_dir  C:/Users/vrinda.r.nair.DIR.000/.jenkins/workspace/databricks-demo/testcode1 /Shared'
+    bat 'C:/Users/vrinda.r.nair.DIR.000/AppData/Local/Programs/Python/Python312/Scripts/databricks workspace import_dir  C:/Users/vrinda.r.nair.DIR.000/.jenkins/workspace/databricks-demo/testcode1/ /Shared/'
   }
 }
