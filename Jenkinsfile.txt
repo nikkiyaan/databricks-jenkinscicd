@@ -11,7 +11,7 @@ node {
     git branch: GITBRANCH, url: GITREPOREMOTE
   }
   stage('Deploy Bundle') {
-    bat """ databricks.exe bundle deploy -t ${BUNDLETARGET} """
+    bat """ databricks.exe bundle deploy """
   }
 
   bat """ databricks.exe workspace import-dir C:/Users/vrinda.r.nair.DIR.000/.jenkins/workspace/databricks-demo/Libraries/python/dabdemo /Users/vrindarnair@gmail.com \
