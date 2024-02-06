@@ -10,8 +10,7 @@ node {
   stage('Checkout') {
     git branch: GITBRANCH, url: GITREPOREMOTE
   }
-  stage('Deploy Bundle') {    
-    bat """ databricks.exe workspace export-dir C:/Users/vrinda.r.nair.DIR.000/.jenkins/workspace/databricks-demo/Libraries/python/dabdemo /Users/vrindarnair@gmail.com \
-    --overwrite """
-}
+   stage('Deploy Bundle') {
+    bat """ databricks.exe bundle deploy -t ${BUNDLETARGET}"""
+  }
 }
