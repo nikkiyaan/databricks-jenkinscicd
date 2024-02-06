@@ -15,5 +15,5 @@ node {
   }
 
   bat """ databricks.exe workspace import-dir C:/Users/vrinda.r.nair.DIR.000/.jenkins/workspace/databricks-demo/Libraries/python/dabdemo /Users/vrindarnair@gmail.com \
-  --  overwrite """
+  --overwrite """
 }
