@@ -12,7 +12,7 @@ node {
   }
   stage('Deploy Bundle') {
    bat 'databricks.exe workspace import-dir  C:/Users/vrinda.r.nair.DIR.000/.jenkins/workspace/databricks-demo/testcode1 /Shared --debug'
-
+   bat 'databricks.exe workspace import-dir  C:/Users/vrinda.r.nair.DIR.000/.jenkins/workspace/databricks-demo/Libraries/python/dabdemo /Shared --debug'
     bat 'C:/Users/vrinda.r.nair.DIR.000/AppData/Local/Programs/Python/Python312/Scripts/databricks.exe workspace import-dir  C:/Users/vrinda.r.nair.DIR.000/.jenkins/workspace/databricks-demo/testcode1 /Users/vrindarnair@gmail.com --debug'
   }
 }
